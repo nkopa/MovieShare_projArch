@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :films
   resources :genres
   get 'static_pages/home'
 
