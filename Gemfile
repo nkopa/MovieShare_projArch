@@ -5,7 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 
 # Bootstrap gem
-gem 'bootstrap-sass', '~> 3.3.4.1'
+gem 'bootstrap-sass', '~>3.3.4.1'
+
+# gem for hashing password
+gem 'bcrypt', '~> 3.1.10'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -16,9 +19,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
+# Use jquery as the JavScript library
 gem 'jquery-rails', '~> 4.0.3'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# Turbolinks makes'~>2.5.3' links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '~> 2.5.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -35,10 +38,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Use sqlite3 as the database for Active Record
+  # Use sqlite3 as te database for Active Record
   gem 'sqlite3', '~> 1.3.10'
 
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' aywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 4.0.5'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
