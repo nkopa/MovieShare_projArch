@@ -8,6 +8,7 @@ gem 'rails', '4.2.1'
 gem 'bootstrap-sass', '~>3.3.4.1'
 
 #paginacja do bootstrapa
+gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 # gem for hashing password

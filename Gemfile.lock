@@ -178,4 +178,5 @@ DEPENDENCIES
   turbolinks (~> 2.5.3)
   uglifier (~> 2.7.0)
   web-console (~> 2.0)
+  will_paginate (~> 3.0.7)
   will_paginate-bootstrap (~> 1.0.1)
