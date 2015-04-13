@@ -13,25 +13,25 @@
 * Deployment instructions
 Po pobraniu repozytorium komendy należy wykonywać w katalodu repozytorium.
 
-bundle install --without production
-bundle exec rake db:migrate
-bundle exec rake db:seed
+ bundle install --without production
+ bundle exec rake db:migrate
+ undle exec rake db:seed
 
 Aby uruchomić lokalny serwer
 
-rails s
+ rails s
 
 Strona powinna być pod adresem https://localhost:3000
 
 * Deployment on heroku
 Komendy należy wykonywać w katalodu repozytorium.
 
-heroku login
-heroku create
-git push heroku master
-heroku run rake db:migrate
-heroku run rake db:seed
+ heroku login
+ heroku create
+ git push heroku master
+ heroku run rake db:migrate
+ heroku run rake db:seed
 
 Aby zobaczyć stronę
 
-heroku open
+ heroku open
