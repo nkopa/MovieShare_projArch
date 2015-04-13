@@ -1,3 +1,4 @@
+
 <%= form_for(@film) do |f| %>
   <% if @film.errors.any? %>
     <div id="error_explanation">
@@ -11,24 +12,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, class: "control-label" %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :director %><br>
-    <%= f.text_field :director %>
+  <div class="form-group">
+    <%= f.label :director, class: "control-label" %>
+    <%= f.text_field :director, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :genre_id %><br>
+  <div class="form-group">
+    <%= f.label :genre_id, class: "control-label" %>
     <% options = options_from_collection_for_select(@genres, 'id', 'name') %>
-    <%= f.select :genre_id,  options%>
+    <%= f.select :genre_id,  options, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <%= f.label :description, class: "control-label" %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-default" %>
   </div>
 <% end %>

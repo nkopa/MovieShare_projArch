@@ -10,7 +10,7 @@ class FilmsController < ApplicationController
   
   def search
     @toSearch = params[:search]
-    @films = Film.where("title LIKE ? OR description LIKE ?", "% #{params[:search]} %", "% #{params[:search]} %").paginate(:page => params[:page], :per_page => 5).order('title ASC')
+    @films = Film.where("title LIKE ? OR description LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%").paginate(:page => params[:page], :per_page => 5).order('title ASC')
   end
 
   # GET /films/1

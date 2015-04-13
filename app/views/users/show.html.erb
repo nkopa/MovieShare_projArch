@@ -1,1 +1,9 @@
-<%= @user.nick %>, <%= @user.email %>
+<% provide(:title, "Profil") %>
+<h1>Profil użytkownika <%= @user.nick %></h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">email</div>
+  <div class="panel-body">
+    <%= @user.email %>
+  </div>
+</div>

@@ -1,13 +1,19 @@
-<%= link_to 'New Film', new_film_path %>
+<% if logged_in? %>
+  <p class="navbar-text navbar-right">
+    <%= link_to 'Nowy Film', new_film_path, class: "navbar-link" %>
+  </p>
+<% end %>
+<br/>
 <%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
 
-<table>
+
+
+<table class="table">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Director</th>
-      <th>Genre</th>
-      <th>Description</th>
+      <th>Tytuł</th>
+      <th>Reżyseria</th>
+      <th>Gatunek</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,10 +24,11 @@
         <td><%= film.title %></td>
         <td><%= film.director %></td>
         <td><%= film.genre.name %></td>
-        <td><%= film.description %></td>
-        <td><%= link_to 'Show', film %></td>
-        <td><%= link_to 'Edit', edit_film_path(film) %></td>
-        <td><%= link_to 'Destroy', film, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaż', film %></td>
+        <% if logged_in? %>
+          <td><%= link_to 'Edytuj', edit_film_path(film) %></td>
+          <td><%= link_to 'Usuń', film, method: :delete, data: { confirm: 'Jesteś pewny?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

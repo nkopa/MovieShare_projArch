@@ -15,15 +15,20 @@
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+/*input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  width: 40%;
   margin-bottom: 15px;
   box-sizing: border-box;
 }
 
 input {
   height: auto !important;
+}
+*/
+
+.logForm {
+  text-align: centre;
 }
 
 #error_explanation {
