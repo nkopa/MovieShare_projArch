@@ -3,4 +3,5 @@ class Film < ActiveRecord::Base
     validates :title, length: { minimum: 1, maximum: 50 }
     validates :director, length: { minimum: 1, maximum: 100 }
     validates :description, length: { minimum: 1, maximum: 2000 }
+    validates :genre_id, presence: true
 end

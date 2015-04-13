@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :genre_id %><br>
-    <%= f.number_field :genre_id %>
+    <% options = options_from_collection_for_select(@genres, 'id', 'name') %>
+    <%= f.select :genre_id,  options%>
   </div>
   <div class="field">
     <%= f.label :description %><br>

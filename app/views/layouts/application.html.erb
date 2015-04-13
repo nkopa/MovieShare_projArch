@@ -12,7 +12,9 @@
 
 <article class="container text-left my_body">
   <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <div class="alert alert-<%= message_type %>"><%= message %>
+      <p id="notice"><%= notice %></p>
+    </div>
   <% end %>
   
   <%= yield %>
