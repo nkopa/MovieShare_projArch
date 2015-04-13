@@ -2,6 +2,9 @@
 
 <h1>Listing Films</h1>
 
+<%= link_to 'New Film', new_film_path %>
+<%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+
 <table>
   <thead>
     <tr>
@@ -30,4 +33,5 @@
 
 <br>
 
-<%= link_to 'New Film', new_film_path %>
+<%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+

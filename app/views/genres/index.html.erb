@@ -2,6 +2,9 @@
 
 <h1>Listing Genres</h1>
 
+<%= link_to 'New Genre', new_genre_path %>
+<%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+
 <table>
   <thead>
     <tr>
@@ -24,4 +27,5 @@
 
 <br>
 
-<%= link_to 'New Genre', new_genre_path %>
+<%= will_paginate @collection, renderer: BootstrapPagination::Rails %>
+
