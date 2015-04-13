@@ -1,15 +1,33 @@
 == README
 
-* Ruby version: 2.1.5
+* Ruby version: 2.2.0
 
 * Ruby on Rails version: 4.2.1
 
 * Dodatkowe gemy:
-- bootstrap-sass
-- will_paginate
-- will_paginate-bootstrap
-- bcrypt
+ bootstrap-sass
+ will_paginate
+ will_paginate-bootstrap
+ bcrypt
 
 * Deployment instructions
+Po pobraniu repozytorium komendy należy wykonywać w katalodu repozytorium.
+bundle install --without production
+bundle exec rake db:migrate
+bundle exec rake db:seed
 
+Aby uruchomić lokalny serwer
+rails s
 
+Strona powinna być pod adresem https://localhost:3000
+
+* Deployment on heroku
+Komendy należy wykonywać w katalodu repozytorium.
+heroku login
+heroku create
+git push heroku master
+heroku run rake db:migrate
+heroku run rake db:seed
+
+Aby zobaczyć stronę
+heroku open
