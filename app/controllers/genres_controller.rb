@@ -4,7 +4,7 @@ class GenresController < ApplicationController
   # GET /genres
   # GET /genres.json
   def index
-    @genres = Genre.paginate(:page => params[:page], :per_page => 5)
+    @genres = Genre.paginate(:page => params[:page], :per_page => 5).order('name ASC')
   end
 
   # GET /genres/1
