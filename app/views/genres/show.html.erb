@@ -1,9 +1,15 @@
 <% provide(:title, @genre.name) %>
 
-<p>
+<div class="panel panel-default">
+  <div class="panel-heading">Nazwa</div>
+  <div class="panel-body">
+    <%= @genre.name %>
+  </div>
+</div>
+<!--p>
   <strong>Name:</strong>
   <%= @genre.name %>
-</p>
+</p-->
 
-<%= link_to 'Edit', edit_genre_path(@genre) %> |
-<%= link_to 'Back', genres_path %>
+<%= link_to 'Edytuj', edit_genre_path(@genre) %> |
+<%= link_to 'Wróć', genres_path %>

@@ -1,24 +1,29 @@
 <% provide(:title, @film.title) %>
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @film.title %>
-</p>
+</h1>
 
-<p>
-  <strong>Director:</strong>
-  <%= @film.director %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">Reżyseria</div>
+  <div class="panel-body">
+    <%= @film.director %>
+  </div>
+</div>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @film.genre.name %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">Gatunek</div>
+  <div class="panel-body">
+    <%= @film.genre.name %>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @film.description %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">Opis</div>
+  <div class="panel-body">
+    <%= @film.description %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_film_path(@film) %> |
-<%= link_to 'Back', films_path %>
+<%= link_to 'Edytuj', edit_film_path(@film) %> |
+<%= link_to 'Wróć', films_path %>
