@@ -6,6 +6,10 @@ class FilmsController < ApplicationController
   def index
     @films = Film.all
   end
+  
+  def search
+    #@films = Film.
+  end
 
   # GET /films/1
   # GET /films/1.json
