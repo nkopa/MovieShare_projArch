@@ -15,7 +15,7 @@ Po pobraniu repozytorium komendy należy wykonywać w katalodu repozytorium.
 
  bundle install --without production
  bundle exec rake db:migrate
- undle exec rake db:seed
+ bundle exec rake db:seed
 
 Aby uruchomić lokalny serwer
 
